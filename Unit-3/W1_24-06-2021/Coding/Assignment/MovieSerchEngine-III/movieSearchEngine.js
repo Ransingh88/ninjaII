@@ -1,5 +1,5 @@
 
-let container = document.getElementById('container');
+var container = document.getElementById('container');
 
 
 async function getMovie() {
@@ -63,11 +63,22 @@ function showMovieDetails(d) {
     let plot = document.createElement('p');
     plot.innerText = d.Plot;
 
+    
 
-    let div = document.createElement('div');
-    div.append(poster, title, plot, year, released, genre, actors, director, language, country, imdbRating)
+
+var div = document.createElement('div');
+    
+    
+    div.append(poster,title,plot,year,released,genre,actors,director,language,country,imdbRating)
 
     container.append(div)
+    if (Number(d.imdbRating) > 8.5) {
+    var tags = ['#movies', '#film', '#bestMovie', '#popular', '#topRatedMovie']
+        //tags = 'hjkhgjgjhd'
+        div.append(tags)
+        container.append(div)
+    }
+    
 }
 
 function notFound() {
