@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="headings">
+    </div>
+    <div id="cont">
+    </div>
+    <ul id="vikings">
+        <li>Priyanshu</li>
+    </ul>
+    <button onclick="addH1()">Create H1</button>
+    <button onclick="addH3()">Create 2 H3</button>
+    <button onclick="createDiv()">Create DIVS</button>
+    <button onclick="createList()"">Add Students</button>
+    <button onclick="addCopyright()">Add Copyright</button>
+    
+</body>
+
+<script>
+    function addH1(){
+        var h1 = document.createElement('h1');
+        h1.innerText="Masai"
+        h1.id='headings'
+        var heading = document.getElementById('headings');
+        heading.append(h1);
+    }
+    function addH3(){
+        
+        for(var i=0;i<2;i++){
+            var h3 = document.createElement('h3');
+            h3.innerText = "A Transformation in education! and Learn to earn, pay when you get."
+            h3.id = 'headings'
+            var head = document.getElementById('cont');
+            head.append(h3);
+        }
+    }
+function createDiv(){
+    for(var i=0;i<10;i++){
+        var div = document.createElement('div');
+        div.innerText = 'Content' + (i+1);
+        div.id = 'cont';
+        var x = document.getElementById('cont');
+        x.append(div)
+    }
+}
+
+
+    function createList(){
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+
+        
+        var ul = document.getElementById('vikings')
+
+        for(var i=0;i< students.length;i++){
+            var li = document.createElement('li')
+            li.innerHTML = `${students[i]}`
+            ul.appendChild(li)
+        }
+    }
+
+function addCopyright(){
+    var p = document.createElement('p');
+    p.innerText = "@ masai 2019";
+    p.id = 'pl'
+    var xy = document.getElementById('headings');
+    xy.append(p)
+}
+</script>
+</html>

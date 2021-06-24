@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <p><a href="">Menu</a></p>
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html">Signup</a></p>
+    </div>
+
+    <form id="form_signup">
+        <label for="name">Name:</label><br> 
+        <input type="text" id="name" placeholder="name">
+        <br><br>
+        <label for="contact_no">Contact No.: </label><br>
+        <input type="number" id="contact_no" placeholder="contact_no">
+
+        <br><br>
+        <label for="email">Email: </label><br>
+        <input type="text" id="email" placeholder="email">
+
+        <br><br>
+        <label for="password">Password.: </label><br>
+        <input type="password" id="password" placeholder="password">
+        <br><br>
+        <button id="signup" onclick="signupBtn(event)">Signup</button>
+    </form>
+</body>
+<script src="oFo.js"></script>
+</html>

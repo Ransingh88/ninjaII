@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "open sans";
+            color: gray;
+            margin: 0;
+            padding: 0;
+        }
+        .git_hub{
+            background: #263238;
+            padding: 30px 30px;
+            text-align: center;
+            height: 550px;
+        }
+        .git_hub > div:first-child p{
+            color: whitesmoke ;
+            width: 1050px;
+            font-size: 36px;
+            line-height: 1.6;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        span{
+            color: rgb(196, 196, 196);
+        }
+       
+        .git_hub > p{
+            font-size: 14px;
+        }
+        .git_hub div:nth-child(3) > div > input{
+            height: 50px;
+            width: 300px;
+            border: none;
+            background: whitesmoke;
+            border-radius: 6px;
+
+        }
+        .git_hub div:nth-child(3) > div > input::placeholder{
+            color: rgb(128, 128, 128,0.7);
+            font-size: 16px;
+            padding-left: 16px;
+            font-weight: 500;
+
+        }
+        .git_hub div:nth-child(3) > div > p{
+            color: rgb(196, 196, 196);
+            float: left;
+            padding-left: 2px;
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+        .git_hub div:nth-child(3) > div{
+            width: 200px;
+            height: 150px;
+            float: left;
+            margin-right: 150px;
+        }
+        .git_hub div:nth-child(3) > div button{
+            background: #00C853;
+            height: 65px;
+            width: 300px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .git_hub div:nth-child(3){
+            width: 1400px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="git_hub">
+        <div>
+            <p>Get started for free -- join the millions of developers
+                already using GitHub to share their code,work together,
+                and build amazing things.
+            </p>
+        </div>
+        <div style="clear: both;"></div>
+        <div>
+            <div>
+                <p>Username</p>
+                <input type="text" placeholder="pick a username">
+            </div>
+            <div>
+                <p>Email</p>
+                <input type="text" placeholder="your email address">
+            </div>
+            <div>
+                <p>Password</p>
+                <input type="text" placeholder="create a password">
+            </div>
+            <div>
+                <button>Sign up for GitHub</button>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <p>By clicking "Sign up for GitHub". you agree to our <span> term of service </span> and <span> private
+                statement.</span> We'll occassinally send you account related email.</p>
+    </div>
+</body>
+</html>

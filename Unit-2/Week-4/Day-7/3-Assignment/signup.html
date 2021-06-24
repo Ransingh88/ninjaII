@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        * {
+            font-family: 'open sans';
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 60%;
+            margin: auto;
+            background-color: #0d1b2a;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .items,
+        .items>a {
+            color: #e0e1dd;
+            margin: 10px;
+            text-decoration: none;
+        }
+        .signup{
+            width: 30%;
+            margin: auto;
+            margin-top: 5%;
+            padding: 5%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: #e0e1dd;
+            color: #0d1b2a;
+        }
+        .signup button{
+            background-color: #1b263b;
+            padding:6px 60px;
+            border: none;
+            border-radius: 5px;
+            color: #e0e1dd;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- <p class="items"><a href="home.html">Home</a> </p> -->
+        <p class="items"><a href="login.html">Login</a></p>
+        <p class="items"><a href="signup.html">Signup</a></p>
+    </div>
+
+    <div class="signup">
+        <form id="form_signup">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="name">
+            <br><br>
+
+            <label for="contact_no">Contact No.</label><br>
+            <input type="number" id="contact_no" placeholder="contact_no">
+            <br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" placeholder="email">
+            <br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" placeholder="password">
+            <br><br>
+
+            <button id="signupBtn" onclick="signup(event)">Signup</button>
+        </form>
+    </div>
+</body>
+
+
+    <script>
+
+        function signup(e){
+
+            e.preventDefault();
+
+            let form = document.getElementById('form_signup');
+            let name = form.name.value;
+            console.log('name: ', name);
+
+            let contact_no = form.contact_no.value;
+            console.log('contact_no: ', contact_no);
+
+            let email = form.email.value;
+            console.log('email: ', email);
+
+            let password = form.password.value;
+            console.log('password: ', password);
+            
+            if (name == '' || contact_no=='' || email=='' || password=='') {
+                alert('All field should be filled')
+            }
+            else{
+                let users = 
+                {
+                    name,
+                    contact_no,
+                    email,
+                    password,
+                }
+                console.log('users: ', users);
+                
+                let arr
+                arr = localStorage.getItem('users');
+                
+                if(arr == null){
+                    arr =[]
+                }else{
+                    arr = JSON.parse(arr);
+                }
+                arr.push(users)
+                localStorage.setItem('users',JSON.stringify(arr));
+                console.log('arr: ', arr);
+
+
+            }
+
+            
+        }
+    </script>
+</html>

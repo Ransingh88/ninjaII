@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            font-family: 'open sans';
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            width: 60%;
+            margin: auto;
+            background-color: #0d1b2a;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .items,
+        .items>a {
+            color: #e0e1dd;
+            margin: 10px;
+            text-decoration: none;
+            padding: 4px;
+        }
+        .MovieslideShow{
+            text-align: center;
+            margin: 10px;
+        }
+        #movies_container{
+            width: 60%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 250px;
+            grid-column-gap: 40px;
+            grid-row-gap: 20px;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .moviesItems{
+            /* background-color: #1b263b; */
+            color: rgb(20, 18, 18);
+        }
+        img{
+            width: 100px;
+            padding: 2px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            
+        }
+        .moviesItems p:nth-child(2){
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .sort{
+            text-align: center;
+            margin: 40px 0;
+        }
+        .sort button{
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #fcca46;
+            color: #252422;
+            font-weight: 400;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <p class="items"><a href="home.html">Home</a> </p>
+        <p class="items"><a href="login.html">Login</a></p>
+        <p class="items"><a href="signup.html">Signup</a></p>
+    </div>
+    <div class="MovieslideShow">
+    <h3>TopMovies</h3>
+    <h1 id="slideshow">Those Who Wish Me Dead</h1>
+    </div>
+
+    <div class="sort">
+            <button id="sortLH" onclick="sortLH()">Sort by low rating to high</button>
+            <button id="sortHL" onclick="sortHL()">Sort by high rating to low</button>
+    </div>
+
+    <div id="movies_container"></div>
+</body>
+
+<script>
+
+const movies = 
+
+[
+    {
+        name:'A Quiet Place Part II',
+        release_date:'June 3, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BMTE2ODU4NDEtNmRjNS00OTk1LTg4NmMtNTAzYzVlNzJmYjgzXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1013_.jpg',
+        imdb_rating:7.9
+    },
+    {
+        name:'Cruella',
+        release_date:'May 28, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BOWI5YTUxOWEtZmRiZS00ZmQxLWE2NzctYTRiODA2NzE1ZjczXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UY720_.jpg',
+        imdb_rating:7.4
+    },
+    {
+        name:'Raya and the Last Dragon',
+        release_date:'March 5, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1085_.jpg',
+        imdb_rating:7.4
+    },
+    {
+        name:'Spiral: From the Book of Saw',
+        release_date:'May 17, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BZjI4ZWQwYzctMGJlMi00OTE1LWFkNjMtY2VlOGQxZmVhNDYyXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UY720_.jpg',
+        imdb_rating:5.5
+    },
+    {
+        name:'Wrath of Man',
+        release_date:'July 23, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BNGVkOTlhOTktNjZiNS00NDg3LWIxMDAtZTY5Y2E0YjllN2IxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UY720_.jpg',
+        imdb_rating:7.2
+    },
+    {
+        name:'Godzilla vs. Kong',
+        release_date:'April 1, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1012_.jpg',
+        imdb_rating:6.5
+    },
+    {
+        name:'Demon Slayer the Movie: Mugen Train',
+        release_date:'May 26, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BODI2NjdlYWItMTE1ZC00YzI2LTlhZGQtNzE3NzA4MWM0ODYzXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_FMjpg_UY720_.jpg',
+        imdb_rating:8.4,
+    },
+    {
+        name:'Dream Horse',
+        release_date:'June 4, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BOTQ5MmRlYWItZmNiYS00ZmE5LTg4NjAtZjZjZjNjYTRhMDY1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX675_.jpg',
+        imdb_rating:6.8,
+    },
+    {
+        name:'Those Who Wish Me Dead',
+        release_date:'May 17, 2021',
+        poster:'https://m.media-amazon.com/images/M/MV5BMDAxMmQ0NTAtNDllNC00ZjE2LTlkNjUtMmExNmY0MmNkMDQ0XkEyXkFqcGdeQXVyNzYyOTM1ODI@._V1_FMjpg_UX1242_.jpg',
+        imdb_rating:6.0,
+    }
+]
+
+function slideshow(){
+        var movie_arr = ["Army of the Dead ", "	The Eternals", '	Cruella', '	Wrath of Man', '	A Quiet Place Part II ', 'Fast & Furious 9', 'Last Night in Soho', '	The Woman in the Window', 'Those Who Wish Me Dead'];
+    let slideDiv = document.getElementById('slideshow')
+
+    let i = 0
+    setInterval(function () {
+        if (i == movie_arr.length) {
+            i = 0
+        }
+        slideDiv.innerHTML = ''
+        let topMovies = `${movie_arr[i]}`
+        slideDiv.append(topMovies)
+
+        i++
+    }, 3000);
+} 
+slideshow();
+
+    localStorage.setItem('movies', JSON.stringify(movies))
+    let movie = JSON.parse(localStorage.getItem('movies'))
+
+
+     function appendElement(data){
+         
+         let parentDiv = document.getElementById('movies_container');
+         parentDiv.innerHTML = ''
+
+         data.forEach(function (ele) {
+
+             let div = document.createElement('div');
+             div.setAttribute('class', 'moviesItems')
+
+             let h_name = document.createElement('p');
+             h_name.innerHTML = `${ele.name}`
+
+             let p_date = document.createElement('p');
+             p_date.innerHTML = `${ele.release_date}`
+
+             let image = document.createElement('img');
+             image.src = `${ele.poster}`
+
+             let rating = document.createElement('p')
+             rating.innerHTML = `${ele.imdb_rating}`
+
+
+             div.append(image, h_name, p_date, rating)
+             parentDiv.append(div)
+
+
+         })
+     }
+     appendElement(movie)
+     
+
+     function sortLH(){
+         let movies = JSON.parse(localStorage.getItem('movies'));
+         
+         movies = movies.sort(function(a,b){
+             return a.imdb_rating - b.imdb_rating;
+            })
+
+            appendElement(movies)
+
+        }
+
+    function sortHL() {
+            let movies = JSON.parse(localStorage.getItem('movies'));
+
+            movies = movies.sort(function (a, b) {
+                return b.imdb_rating - a.imdb_rating;
+            })
+
+            appendElement(movies)
+
+        }
+     
+
+</script>
+</html>

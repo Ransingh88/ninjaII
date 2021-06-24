@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .main_cont{
+            display: flex;
+            background-color: royalblue;
+            padding: 10px;
+            width: 800px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .item{
+            background-color: yellowgreen;
+            height: 300px;
+            margin: 20px;
+            flex-grow: 1;
+            font-size: 40px;
+            padding: 20px;
+            
+        }
+        .item1{
+            flex-grow: 5;
+            height: 80px;
+            background-color: yellow;
+        }
+        .item3{
+            background-color: red;
+        }
+        .item4{
+            background-color: blue;
+        }
+        .item5{
+            background-color: gray;
+        }
+
+        @media screen and (max-width:768px) {
+            .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            
+        }
+
+        
+        .item{
+            flex-grow: 1;
+            width: 200px;
+        }
+       .item4{
+           order: 1;
+       }
+       .item3{
+           order: 2;
+       }
+       .item5{
+           order: 3;
+       }
+        }
+
+        @media screen and (max-width:562px) {
+            .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-grow: 1;
+            
+        }
+        .item{
+            height: 200px;
+            flex-grow: 1;
+            width: 400px;
+            order: 0;
+        }
+        .item1{
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="item item1">Navigation</div>
+        </div>
+        <div class="container">
+            <div class="item">Box1</div>
+            <div class="item item3">Box2</div>
+            <div class="item item4">Box3</div>
+            <div class="item item5">Box4</div>
+        </div>
+    
+    
+</body>
+</html>

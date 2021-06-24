@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #cont{
+            background-color: royalblue;
+            height: 500px;
+            width: 600px;
+            border-radius: 20px;
+        }
+        #submit_btn{
+            background-color: greenyellow;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 5px;
+            font-size: 26px;
+            float: right;
+            margin-top: 400px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <button id="submit_btn">Submit</button>
+    </div>
+    <script>
+        var container = document.getElementById('cont');
+        container.addEventListener('mouseover',cont)
+        container.addEventListener('mouseout', rem)
+
+        function cont(){
+
+            var btn = document.getElementById('submit_btn');
+
+            btn.style.backgroundColor = 'red'
+        }
+
+        function rem(){
+            
+            var btn = document.getElementById('submit_btn');
+
+            btn.style.backgroundColor = 'greenyellow'
+        }
+        
+    </script>
+</body>
+</html>

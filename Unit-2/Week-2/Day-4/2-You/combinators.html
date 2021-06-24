@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: "roboto";
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* top card */
+        .clearFloat{
+            clear: both;
+        }
+        .card-container{
+            width: 850px;
+            height: 190px;
+            margin: auto;
+            background-color: #F8F8FF;
+        }
+        .card{
+            background: #FBC02D;
+            height: 60px;
+            width: 200px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 50px 20px;
+            float: left;
+        }
+        .img-box{
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+            padding: 5px;
+            float: left;
+        }
+        .card > .img-box > img{
+            width: 45px;
+            border-radius: 50%;
+        }
+        .card-title{
+            height: 50px;
+            padding: 5px;
+            float: left;
+        }
+        .card-title > h4{
+            margin: 0;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .card-title > p{
+            margin: 0;
+            color: white;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        /* heading */
+        .alt-font{
+            font-family: 'Abril Fatface', cursive;
+        }
+        .heading{
+            font-size: 40px;
+            color: #151c63;
+            text-align: center;
+            margin: 50px auto 30px;
+            width: 400px;
+        }
+        .navbar div{
+            background: #F8F8FF;
+            height: 20px;
+            color: #212121;
+            padding: 5px 20px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 400;
+            float: left;
+            margin: 2px;
+            border-radius: 3px;
+        }
+        .navbar div:first-child{
+            background: #26C6DA;
+            color: #F8F8FF;
+        }
+        .navbar{
+            width: 490px;
+            margin: auto;
+        }
+        .stream-container{
+            width: 840px;
+            margin: auto;
+        }
+        .stream-boxes{
+            background: #F8F8FF;
+            width: 260px;
+            border-radius: 10px 10px 0px 0px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 50px;
+        }
+        .stream-img > img{
+            border-radius: 10px 10px 0px 0px;
+            width: 260px;
+        }
+        .stream-text{
+            padding: 40px 20px;
+        }
+        .stream-text > h3{
+            margin: 18px 0px;
+            font-weight: 300;
+        }
+        div > button{
+            color: #26C6DA;
+            border: 1px solid #26C6DA;
+            border-radius: 4px;
+            background-color: #F8F8FF;
+            padding: 8px 26px;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- top card -->
+    <div class="card-container">
+        <div class="card">
+            <div class="img-box"><img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/icon_circle.png" alt="logo1"></div>
+            <div class="card-title">
+                <h4>Scholarship</h4>
+                <p>Available</p>
+            </div>
+        </div>
+        <div class="card" style="background: #0288D1;">
+            <div class="img-box"><img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/icon_circle.png"
+                    alt="logo1"></div>
+            <div class="card-title">
+                <h4>Scholarship</h4>
+                <p>Available</p>
+            </div>
+        </div>
+        <div class="card" style="background: #26C6DA;">
+            <div class="img-box"><img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/icon_circle.png"
+                    alt="logo1"></div>
+            <div class="card-title">
+                <h4>Scholarship</h4>
+                <p>Available</p>
+            </div>
+        </div>
+    </div>
+    <div class="clearFloat"></div>
+
+    <!-- heading -->
+    <div class="alt-font heading">Popular Program</div>
+
+    <!-- nav bar -->
+    <div class="navbar">
+        <div>Graduate</div>
+        <div>Postgraduate</div>
+        <div>PHD Scholarship</div>
+        <div>Training</div>
+    </div>
+    <div class="clearFloat"></div>
+
+    <!-- image with description -->
+    <div class="stream-container">
+        <div class="stream-boxes">
+            <div class="stream-img"><img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg" alt=""></div>
+            <div class="stream-text">
+                <p>Agriculture</p>
+                <h3 class="alt-font">Chemical Engineering</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ipsam! Laboriosam quaerat in.</p>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+        <div class="stream-boxes">
+            <div class="stream-img"><img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+                    alt=""></div>
+            <div class="stream-text">
+                <p>Agriculture</p>
+                <h3 class="alt-font">Chemical Engineering</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ipsam! Laboriosam quaerat in.</p>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+        <div class="stream-boxes">
+            <div class="stream-img"><img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+                    alt=""></div>
+            <div class="stream-text">
+                <p>Agriculture</p>
+                <h3 class="alt-font">Chemical Engineering</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ipsam! Laboriosam quaerat in.</p>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

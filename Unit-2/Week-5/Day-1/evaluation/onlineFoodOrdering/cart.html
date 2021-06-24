@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <p><a href="cart.html">Cart</a></p>
+        <p><a href="menu.html">Menu</a></p>
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html">Signup</a></p>
+    </div>
+
+   <div id="cartItems" class="cartItems">
+
+   </div>
+
+   <button id="orderSubmit" onclick="orderSubmit()">Submit Order</button>
+</body>
+<!-- <script src="oFo.js"></script> -->
+<script>
+    function cartItem() {
+            let cartItem = JSON.parse(localStorage.getItem('cartItem'));
+
+            //console.log('dishes: ', cartItem);
+
+            let parentDiv = document.getElementById('cartItems')
+
+            cartItem.forEach(function (ele) {
+                //console.log('ele: ', ele);
+
+                let div = document.createElement('div');
+
+                let p_name = document.createElement('p');
+                p_name.innerHTML = ele.name;
+                let p_price = document.createElement('p');
+                p_price.innerHTML = ele.price
+                let p_desc = document.createElement('p');
+                p_desc.innerHTML = ele.description
+                let p_time = document.createElement('p');
+                p_time.innerHTML = ele.prepareTime
+                let image = document.createElement('img');
+                image.src = ele.image
+
+
+                div.append(image, p_name, p_price, p_desc, p_time);
+                parentDiv.append(div);
+            })
+        }
+        cartItem()
+
+        function orderSubmit(){
+            order = ['Your order is accepted','Your order is being cooked','Your order is ready','Order out for delivery','Order delivered']
+
+            let id = 0;
+            setInterval(function(){
+
+                if(id == order.length){
+                    alert('Thank you for Ordering the food!Have a nice Day')
+                    
+                }else{
+                    alert(order[id])
+                }
+                id++
+            },5000);
+
+            
+
+        }
+</script>
+
+</html>

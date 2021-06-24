@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 60%;
+            margin: auto;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 50px repeat(3,150px);
+            grid-gap: 10px;
+            grid-template-areas: "nav nav nav"
+                                 "cont cont item1"
+                                 "cont cont item2"
+                                 "cont cont item3";
+
+        }
+        .nav{
+            grid-area: nav;
+            background-color: yellow;
+        }
+        .cont{
+            grid-area: cont;
+            background-color: red;
+        }
+        .item1{
+            grid-area: item1;
+            background-color: green;
+        }
+        .item2{
+            grid-area: item2;
+            background-color: green;
+        }
+        .item3{
+            grid-area: item3;
+            background-color: green;
+        }
+
+        @media (max-width:992px){
+            .container{
+                grid-template-rows: 50px repeat(5,150px);
+                    grid-template-areas: "nav nav nav"
+                                 "cont cont cont"
+                                 "cont cont cont"
+                                 "item1 item2 item3";
+
+        }
+
+            }
+
+            @media (max-width:600px){
+            .container{
+                    grid-template-areas: "nav nav nav"
+                                 "cont cont cont"
+                                 "cont cont cont"
+                                 "item1 item1 item1"
+                                 "item2 item2 item2"
+                                 "item3 item3 item3";
+
+        }
+
+            }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">Navbar</div>
+        <div class="cont">Content</div>
+        <div class="item1">BOX1</div>
+        <div class="item2">BOX2</div>
+        <div class="item3">BOX3</div>
+    </div>
+</body>
+</html>

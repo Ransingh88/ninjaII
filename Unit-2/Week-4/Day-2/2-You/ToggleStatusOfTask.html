@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Name of the Task: <input type="text" name="" id="name">
+    <button id="submit">Submit</button>
+    <ul id="list"></ul>
+
+    <script>
+        var button = document.getElementById('submit');
+        button.addEventListener('click', tasks);
+
+        function tasks() {
+
+            var name = document.getElementById('name').value; //Getting the text box value.
+
+            function MultipleTask(name, status = false) {     //Creating a Constructor function and set the status value=false as default.
+                var D = new Date()                            //Getting current date
+                this.name = name;
+                this.date = `${D.getDate()}-${D.getMonth()}-${D.getFullYear()}`;       //maping the only date in string literal format.
+                this.statusOfTask = status;
+            }
+
+            var ttggll;
+
+            var task1 = new MultipleTask(name);                 //creating new object with the help of new keyword
+            console.log('task1: ', task1);
+            var list = document.createElement('li');            //creating list item(li) element
+            list.append(task1.name)                             //appending to the 'li' the name property value
+            var ul = document.getElementById('list');           //getting the ul element by id.
+            var toggleBtn = document.createElement('button');
+            toggleBtn.innerHTML = 'Toggle'
+            toggleBtn.onclick = function(){
+                ttggll = toggle()
+                ul.append(ttggll)
+            }
+
+            ul.append(list,toggleBtn,task1.statusOfTask)                                     //appending list item(li) to unordered list(ul).
+            console.log(ul)
+
+            function toggle() {
+                if (task1.statusOfTask == false) {
+                    return true
+                } else {
+                    return false;
+                }
+            }
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>

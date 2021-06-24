@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex;
+            max-width: 1024px;
+            margin: auto;
+        }
+        .flex > div{
+            flex-basis: 15%;
+            height: 150px;
+            margin: 20px;
+            background-color: teal;
+            border-radius: 5px;
+        }
+        .expand{
+            flex-grow: 1;
+        }
+        .grid{
+            max-width: 1024px;
+            margin: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: auto;
+            grid-template: "a a b b b c c"
+                            "d d d d d e e f f"
+                            "g g h h i i i i i";
+        }
+        .grid > div{
+            height: 150px;
+            background-color: red;
+            border-radius: 4px;
+        }
+        #id1{
+            grid-area: a;
+        }
+        #id2{
+            grid-area: b;
+        }
+        #id3{
+            grid-area: c;
+        }
+        #id4{
+            grid-area: d;
+        }
+        #id5{
+            grid-area: e;
+        }
+        #id6{
+            grid-area: f;
+        }
+        #id7{
+            grid-area: g;
+        }
+        #id8{
+            grid-area: h;
+        }
+        #id9{
+            grid-area: i;
+        }
+        .grid-2{
+            display: grid;
+            grid-template-columns: repeat(4,150px);
+            grid-template-rows: repeat(4,150px);
+            grid-gap: 20px;
+        }
+        .grid-2 > div{
+                background-color: green;
+                border-radius: 4px;
+                font-size: 32px;
+        }
+        .grid-2 > div:nth-child(8){
+            grid-row-start: 3;
+        }
+        .grid-2 > div:nth-child(9){
+            grid-row-start: 3;
+            grid-column-start: 2;
+        }
+        .grid-2 > div:nth-child(10){
+            grid-row-start: 4;
+        }
+        .layout{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .top{
+            background-color: yellow;
+            height: 80px;
+            margin: 20px;
+        }
+        .left,.right{
+            background-color: red;
+            height: 400px;
+            margin: 20px;
+        }
+        .right{
+            background-color: greenyellow;
+        }
+        @media (min-width:980px) {
+            .layout{
+                flex-direction: row;
+                
+            }
+            .layout > div{
+                flex-grow: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex">
+        <div></div>
+        <div class="expand"></div>
+        <div></div>
+    </div>
+    <div class="flex">
+        <div class="expand"></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="flex">
+        <div></div>
+        <div ></div>
+        <div class="expand"></div>
+    </div>
+<hr>
+    <div class="grid">
+        <div id="id1"></div>
+        <div id="id2"></div>
+        <div id="id3"></div>
+        <div id="id4"></div>
+        <div id="id5"></div>
+        <div id="id6"></div>
+        <div id="id7"></div>
+        <div id="id8"></div>
+        <div id="id9"></div>
+    </div>
+<hr>
+    <div class="grid-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <hr>
+    <div class="top">top</div>
+    <div class="layout">
+        <div class="left">Left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>

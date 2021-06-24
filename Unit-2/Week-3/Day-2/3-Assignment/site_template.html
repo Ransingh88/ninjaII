@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-rows: 50px 500px;
+            grid-template-areas: ". n n n n n ."
+                                 ". m m c c c .";
+        }
+        .nav{
+            background-color: red;
+            grid-area: n;
+            border-radius: 5px;
+        }
+        .menu{
+            background-color: green;
+            grid-area: m;
+             border-radius: 5px;
+        }
+        .content{
+            background-color: teal;
+            grid-area: c;
+             border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"></div>
+        <div class="menu"></div>
+        <div class="content"></div>
+    </div>
+</body>
+</html>

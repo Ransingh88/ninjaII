@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .scorecard{
+            width: 500px;
+            margin: auto;
+        }
+        .score1,.score2{
+            height: 200px;
+            width: 115px;
+            float: left;
+        }
+        .score1{
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+        .score1 input,.score2 input{
+            background-color: red;
+            width: 50px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            border: 2px solid black;
+            float: left;
+            margin-right: 100px;
+        }
+        .score2 input{
+            background-color: green;
+        }
+        .clear{
+            clear: both;
+        }
+        .buttons #b10{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            width: 250px;
+        }
+         .buttons input{
+            background-color: orange;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 8px;
+            height: 80px;
+            width: 80px;
+        }
+        
+        .buttons,.scorecard{
+            text-align: center;
+        }
+        div input{
+           font-size: 40px;
+            width: 250px;
+            border: 2px solid black;
+            background-color: grey;
+        }
+        #f1,#f3,#f7,#f9{
+            background-color: green;
+        }
+        #f0{
+            background-color: purple;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="scorecard">
+        <div class="score1">
+            <input type="text" id="min" value="43">
+            <h1>min</h1>
+        </div>
+        <div class="score2">
+            <input type="text" id="max" value="500">
+            <h1>max</h1>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <form action="" name="scoree">
+    <div>
+        <h2>Score</h2>
+        <input type="text" name="box" id="scoreInput">
+    </div>
+    <br>
+    <div class="buttons">
+        <input type="button" onclick="fun(this)" value="1" id="f1" >
+        <input type="button" onclick="fun(this)" value="2" id="2">
+        <input type="button" onclick="fun(this)" value="3" id="f3"><br>
+        <input type="button" onclick="fun(this)" value="4" id="4">
+        <input type="button" onclick="fun(this)" value="5" id="5">
+        <input type="button" onclick="fun(this)" value="6" id="6"><br>
+        <input type="button" onclick="fun(this)" value="7" id="f7">
+        <input type="button" onclick="fun(this)" value="8" id="8">
+        <input type="button" onclick="fun(this)" value="9" id="f9"><br>
+        <input type="button" onclick="fun(this)" value="0" id="f0"><br>
+        <input type="button" class="enter" onclick="enter()" value="ENTER" id="b10"><br>
+    </div>
+    </form>
+    
+
+
+    <script>
+        function fun(e){
+            scoree.box.value+=e.value;
+        }
+
+        function enter(){
+            var score = document.getElementById('scoreInput').value;
+            var min = document.getElementById('min').value;
+            var max = document.getElementById('max').value;
+
+            if(score<min){
+                min = score;
+            }else if(score > max){
+                max = score
+            }
+            document.getElementById('min').value = min;
+            document.getElementById('max').value = max;
+            console.log(score,min,max)
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.navbar {
+  width: 80%;
+  margin: auto;
+  background-color: royalblue;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  color: white;
+  font-family: "roboto";
+}
+.navbar > p > a {
+  margin: 2px 10px;
+  text-decoration: none;
+  color: white;
+}
+#form_signup,
+#form_login {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+h1 {
+  text-align: center;
+}
+
+.dish_container,
+.cartItems {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 40px;
+  text-align: center;
+}
+.dish_container > div > img,
+.cartItems > div > img {
+  width: 80%;
+}
+
+.dish_container > div,
+.cartItems > div {
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}

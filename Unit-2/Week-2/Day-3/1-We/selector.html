@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bar{
+            background-color: teal;
+            height: 500px;
+            width: 100px;
+            margin-right: 25px;
+            float: left;
+        }
+        .container{
+            width: 600px;
+            margin: auto;
+        }
+        .clearFloats{
+            clear: both;
+        }
+        .box{
+            float: left;
+            height: 150px;
+            margin: 15px;
+            background-color: teal;
+            width: 150px;
+        }
+        .bigBox{
+            width: 400px;
+        }
+        .textCenter{
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+        }
+        .imgCont{
+            padding: 6px;
+            background: lightgray;
+            border: 1px solid gray;
+        }
+        .imgBox{
+            float: left;
+            margin: 20px;
+        }
+        img{
+            width: 400px;
+        }
+        #imagesBox{
+                width: 1368px;
+                margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <hr class="clearFloats">
+    <div style="width: 790px; margin: auto;">
+        <div>
+            <div class="box"></div>
+            <div class="box bigBox"></div>
+            <div class="box"></div>
+            <div class="clearFloats"></div>
+        </div>
+        <div>
+            <div class="box bigBox"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="clearFloats"></div>
+        </div>
+        <div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box bigBox"></div>
+            <div class="clearFloats"></div>
+        </div>
+    </div>
+    <hr class="clearFloats">
+
+    <h1 class="textCenter">Masai School</h1>
+    <p class="textCenter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veritatis magni aliquam ad placeat excepturi eum impedit maiores laborum quibusdam iste molestias facilis dolore dolor doloribus praesentium, quod nulla libero.</p>
+    <div id="imagesBox">
+        <div class="imgBox">
+            <div class="imgCont">
+                <img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg" alt="">
+            </div>
+            <h2 class="textCenter">91 Spring Board, kormangla</h2>
+            
+        </div>
+        <div class="imgBox">
+            <div class="imgCont">
+                <img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg" alt="">
+            </div>
+            <h2 class="textCenter">91 Spring Board, kormangla</h2>
+        
+        </div>
+        <div class="imgBox">
+            <div class="imgCont">
+                <img src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg" alt="">
+            </div>
+            <h2 class="textCenter">91 Spring Board, kormangla</h2>
+        
+        </div>
+    </div>
+</body>
+</html>

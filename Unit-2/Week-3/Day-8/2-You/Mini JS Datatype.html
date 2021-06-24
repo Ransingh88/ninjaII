@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="points"></p>
+    <button id="Objects" onclick="object()">Objects</button>
+    <button id="Arrays" onclick="arrays()">Arrays</button>
+    <button id="Functions" onclick="functions()">Functions</button>
+    <button id="Strings" onclick="strings()">Strings</button>
+    <button id="Numbers" onclick="numbers()">Numbers</button>
+    <button id="null" onclick="null1()">null</button>
+    <button id="undefined" onclick="undefined1()"">undefined</button>
+
+    <script>
+        function object(){
+            var p = document.getElementById('points');
+            p.innerHTML = `<ul>
+                                <li>Object is a non-primitive data type in JavaScript.</li>
+                                <li>It is like any other variable, the only difference is that an object holds multiple values in terms of properties and methods.</li>
+                                <li>Properties can hold values of primitive data types and methods are functions.</li>
+                                <li>In JavaScript, an object is a standalone entity because there is no class in JavaScript.</li>
+                                <li>In JavaScript, an object can be created in two ways: 1.Object literal 2.Object constructor</li>
+                          </ul>`
+        }
+        function arrays() {
+                var p = document.getElementById('points');
+                p.innerHTML = `<ul>
+                                <li>The JavaScript Array class is a global object that is used in the construction of arrays; which are high-level, list-like objects.</li>
+                                <li>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations.</li>
+                                <li>An array is a type of object used for storing multiple values in single variable</li>
+                                <li>Each value (also called an element) in an array has a numeric position, known as its index</li>
+                                <li>he array index starts from 0, so that the first array element is arr[0] not arr[1].</li>
+                          </ul>`
+            }
+            function functions() {
+                    var p = document.getElementById('points');
+                    p.innerHTML = `<ul>
+                                <li>The function is callable object that executes a block of code.</li>
+                                <li>Since functions are objects, so it is possible to assign them to variables</li>
+                                <li>functions can be used at any place any other value can be used.</li>
+                                <li>Functions can be stored in variables, objects, and arrays.</li>
+                                <li>Functions can be passed as arguments to other functions, and functions can be returned from functions.</li>
+                          </ul>`
+                }
+                function strings() {
+                        var p = document.getElementById('points');
+                        p.innerHTML = `<ul>
+                                <li>The string data type is used to represent textual data (i.e. sequences of characters).</li>
+                                <li>Strings are created using single or double quotes surrounding one or more characters</li>
+                                <li>Strings can be created by enclosing the string literal (i.e. string characters) either within single quotes (') or double quotes (")</li>
+                                <li>you can still use single quotes inside a single quoted strings or double quotes inside double quoted strings by escaping the quotes with a backslash character (\)</li>
+                                <li>he backslash (\) is called an escape character, whereas the sequences \' and \" that we've used in</li>
+                          </ul>`
+                    }
+                    function numbers() {
+                            var p = document.getElementById('points');
+                            p.innerHTML = `<ul>
+                                <li>The number data type is used to represent positive or negative numbers with or without decimal place,</li>
+                                <li>The Number data type also includes some special values which are: Infinity, -Infinity and NaN.</li>
+                                <li> Infinity represents the mathematical Infinity ∞, which is greater than any number. Infinity is the result of dividing a nonzero number by 0</li>
+                                <li>While NaN represents a special Not-a-Number value. It is a result of an invalid or an undefined mathematical operation</li>
+                                <li>JavaScript supports both integer and floating-point numbers that can be represented in decimal, hexadecimal or octal notation.</li>
+                          </ul>`
+                        }
+                        function null1() {
+                                var p = document.getElementById('points');
+                                p.innerHTML = `<ul>
+                                <li>This is another special data type that can have only one value-the null value.</li>
+                                <li>A null value means that there is no value. It is not equivalent to an empty string ("") or 0, it is simply nothing.</li>
+                                <li>A variable can be explicitly emptied of its current contents by assigning it the null value.</li>
+                                
+                          </ul>`
+                            }
+                            function undefined1() {
+                                    var p = document.getElementById('points');
+                                    p.innerHTML = `<ul>
+                                <li>The undefined data type can only have one value-the special value undefined.</li>
+                                <li>If a variable has been declared, but has not been assigned a value, has the value undefined.</li>
+                                
+                          </ul>`
+                                }
+    </script>
+</body>
+</html>

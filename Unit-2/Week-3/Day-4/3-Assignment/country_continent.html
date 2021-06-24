@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="continent_select">
+        <option value="India"> India </option>
+        <option value="usa"> United States of America </option>
+        <option value="china"> China </option>
+        <option value="nepal"> Nepal </option>
+        <option value="australia"> Australia </option>
+        <option value="france"> France </option>
+        <option value="germany"> Germany </option>
+        <option value="South_Africa"> South Africa </option>
+        <option value="Nigeria"> Nigeria </option>
+        <option value="Mexico"> Mexico </option>
+        <option value="Argentina"> Argentina </option>
+        <option value="Brazil"> Brazil </option>
+        <option value="Canada"> Canada </option>
+        <option value="Singapore"> Singapore </option>
+        <option value="Sweden"> Sweden </option>
+    </select>
+    <button id="submit" onclick="continent()">Submit</button>
+
+    <script>
+        function continent(){
+        var country = document.getElementById('continent_select').value;
+
+        switch(country){
+            case 'India': alert('continent is Asia');
+                          break;
+            case 'usa': alert('continent is North America');
+                          break;
+            case 'china': alert('continent is Asia');
+                          break;
+            case 'nepal': alert('continent is Asia');
+                          break;
+            case 'australia': alert('continent is Oceania');
+                          break;
+            case 'france': alert('continent is Europe');
+                          break;
+            case 'germany': alert('continent is Europe');
+                          break;
+            case 'South_Africa': alert('continent is Africa');
+                          break;
+            case 'Nigeria': alert('continent is Africa');
+                          break;
+            case 'Mexico': alert('continent is North America');
+                          break;
+            case 'Argentina': alert('continent is South America');
+                          break;
+            case 'Brazil': alert('continent is South America');
+                          break;
+            case 'Canada': alert('continent is North America');
+                          break;
+            case 'Singapore': alert('continent is Asia');
+                          break;
+            case 'Sweden': alert('continent is Europe');
+                          break;
+            default:alert('Sorry!, Please choose correct option.')
+        }
+        }
+    </script>
+</body>
+</html>

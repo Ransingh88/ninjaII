@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #travel_form{
+            width: 10%;
+        }
+        input{
+            margin-bottom: 5%;
+        }
+        img{
+            width: 10%;
+        }
+        #data{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    </style>
+</head>
+<body>
+    <form id="travel_form">
+        <input type="text" id="name" placeholder="name">
+        <input type="number" id="rating" placeholder="rating">
+        <input type="text" id="image" placeholder="image">
+    </form>
+
+    <button onclick="addLocation()">Add Location</button>
+    <button onclick="showLocation()">Show Locations</button>
+    <button onclick="showFav()">Show Fav</button>
+    <div id="parentDiv"></div>
+
+    <script src="travelApp.js"></script>
+</body>
+</html>

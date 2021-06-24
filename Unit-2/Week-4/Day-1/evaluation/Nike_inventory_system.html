@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike inventory system</title>
+    <style>
+        .container{
+            height: 100vh;
+            margin: 30px;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100%;
+            grid-template-areas: "sidebar content"
+                                 "sidebar content";
+        }
+        .sidebar{
+            display: grid;
+            grid-area: sidebar;
+            background-color: royalblue;
+            grid-template-columns: auto;
+            
+        }
+        .content{
+            height: 100vh;
+            display: grid;
+            grid-area: content;
+            grid-gap: 10px;
+            background-color: lightblue;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2,35%);
+            grid-template-areas: "a b c"
+                                 "d e f";
+        }
+        .form{
+            height: 50%;
+            margin: 50px;
+        }
+        .form input, .form button{
+            margin: 6px;
+        }
+        .a{
+            grid-area: a;
+            background-color: cornflowerblue;
+            margin: 0 30px 0 30px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="form">
+                <input type="text" placeholder="Name" id="name"> <br>
+                <input type="text" placeholder="price" id="price"><br>
+                <input type="text" placeholder="description" id="description"><br>
+                <input type="text" placeholder="Estimated Delivery" id="ed"><br>
+                <input type="text" placeholder="image URL" id="img"><br>
+                <button id="addProduct" onclick="addProduct()">Add Product</button>
+            </div>
+
+        </div>
+
+
+        <div class="content" id="content">
+            
+        </div>
+    </div>
+
+
+    <script>
+        var id = 1
+        function addProduct(){
+            var name = document.getElementById('name').value;
+            var price = document.getElementById('price').value;
+            var description = document.getElementById('description').value;
+            var estimate_delivery = document.getElementById('ed').value;
+            var image = document.getElementById('img').value;
+
+            var content = document.getElementById('content');
+            var div = document.createElement('div');
+           
+            var ids = id
+            div.id = id;
+            id++;
+           // div.setAttribute('class',a)
+            div.innerHTML = `<img src="http://via.placeholder.com/50" alt="image">
+                <h2>${name}</h2>
+                <p>Price: ${price}</p>
+                <p>Description: ${description}</p>
+                <p>Estimate Delivery in: ${estimate_delivery} Days</p>
+                <div>
+                    <button onclick = 'remove(${ids})'>remove</button>
+                    <button onclick = 'update(${ids})'>Update</button>
+                </div>`
+                
+                content.appendChild(div)
+            
+
+
+        }
+        function remove(id) {
+                var element = document.getElementById(id);
+                element.remove();
+            }
+
+
+        function update(id){
+            var div = document.getElementById(id);
+                var price = prompt('enterNew Price');
+                var name = document.getElementById('name').value;
+            
+            var description = document.getElementById('description').value;
+            var estimate_delivery = document.getElementById('ed').value;
+            var image = document.getElementById('img').value;
+
+           div.innerHTML = `<img src="http://via.placeholder.com/50" alt="image">
+                <h2>${name}</h2>
+                <p>Price: ${price}</p>
+                <p>Description: ${description}</p>
+                <p>Estimate Delivery in: ${estimate_delivery} Days</p>
+                <div>
+                    <button onclick = 'remove(${id})'>remove</button>
+                    <button onclick = 'update(${id})'>Update</button>
+                </div>
+                `
+                
+            console.log(div)
+        }
+    </script>
+</body>
+</html>

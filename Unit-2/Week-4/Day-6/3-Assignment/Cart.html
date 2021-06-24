@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parentDiv {
+            display: grid;
+            width: 70%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            margin: auto;
+            grid-gap: 10px;
+            text-align: center;
+        }
+    
+        img {
+            width: 100px;
+        }
+    
+        .items {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #cart{
+            float: right;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cart Items</h1>
+    <button onclick="showCartItems()">show cart Items</button>
+    <input type="text" id="discount" placeholder="Enter Promo Code">
+    <button id="apply">Apply</button>
+    <div id="cart"></div>
+    <div id="parentDiv"></div>
+
+    <script>
+        let total
+        function showCartItems(){
+            let data = JSON.parse(localStorage.getItem('cartItem'));
+            
+
+
+            // console.log('data: ', JSON.parse(data));
+
+            let parent = document.getElementById('parentDiv');
+            //console.log('parent: ', parent);
+            let cartEle = document.getElementById('cart')
+            
+            
+            let noOfItem =  data.length;
+             total = 0;
+            
+
+
+            data.forEach(function (ele) {
+                //console.log('ele: ', ele);
+
+                let div = document.createElement('div');
+                div.setAttribute('class', 'items')
+
+                let p_name = document.createElement('p');
+                p_name.innerHTML = `Name: ${ele.name}`
+                
+
+                let p_price = document.createElement('p');
+                p_price.innerText = `Price: ${ele.price}`;
+                total += Number(ele.price)
+
+
+                let image = document.createElement('img');
+                image.src = ele.image;
+
+                div.append(image, p_name, p_price);
+                parent.append(div)
+
+            })
+
+            let TotalItem = document.createElement('h3')
+            TotalItem.innerHTML = `Total no. of Item: ${noOfItem}`;
+            let totalPrice = document.createElement('h4')
+            totalPrice.innerHTML =`Total Cart Price: ${total}`;
+            
+             let ad = document.getElementById('apply');
+             let discount_p = document.createElement('h4')
+             let checkoutBtn = document.createElement('button')
+            checkoutBtn.innerHTML = 'Checkout'
+            checkoutBtn.onclick = function(){
+                checkout();
+            }
+
+
+
+             ad.onclick =function(){
+                 let dis = applyDiscount(total);
+                 
+                 discount_p.innerHTML = ' '
+                 
+                 if(dis == undefined){
+                     console.log('Promo code not valid')
+                 }else{
+                     discount_p.innerHTML = `After Discount: ${dis}`
+                     cartEle.append(discount_p,checkoutBtn)
+                 }
+
+                }
+                //console.log('dis: ', dis);
+
+                
+               cartEle.append(TotalItem, totalPrice)
+                
+                
+    
+            
+        }
+
+
+        function applyDiscount(price){
+            let promocode = document.getElementById('discount').value;
+            let afterDiscount
+
+            if(promocode == 'masai30'){
+                 afterDiscount = price - (price * (30 / 100))
+            }
+            
+            //console.log(discount, afterDiscount)
+            return afterDiscount
+        }
+
+        function checkout(){
+            window.location.href = 'sucess.html'
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "roboto";
+        }
+        .clearFloat{
+            clear: both;
+        }
+        .container{
+            width: 1400px;
+            margin: auto;
+        }
+        .card_container{
+            width: 100%;
+            height: 500px;
+            margin: auto;
+        }
+        .card_container div:first-child{
+            font-size: 52px;
+            font-weight: 900;
+            text-align: center;
+            padding: 20px;
+            color: rgb(36, 36, 36);
+        }
+        .card{
+            background-color: whitesmoke;
+            width: 25%;
+            margin: 2%;
+            float: left;
+            margin-left: 5%;
+        }
+        .card img{
+            width: 100%;
+        }
+        .card > p:nth-child(2){
+            font-size: 16px;
+            padding: 15px 20px;
+            color: rgb(252, 95, 95);
+        }
+        .card > p:nth-child(3){
+            font-size: 30px;
+            width: 90%;
+            padding:  0px  20px;
+            color: rgb(31, 31, 31);
+        }
+        .card > p:nth-child(4){
+            font-size: 14px;
+            width: 80%;
+            padding:  6px  20px 20px;
+            color: rgb(161, 161, 161);
+        }
+        .footer{
+            background-color: darkblue;
+            height: 340px;
+            color: white;
+            padding: 5%;
+            margin-top: 200px;
+        }
+        .footer div:nth-child(1){
+            width: 40%;
+            float: left;
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+        .footer div:nth-child(1) h1{
+            width: 60%;
+            font-size: 38px;
+        }
+        .footer div:nth-child(1) p{
+            width: 80%;
+            font-size: 18px;
+            padding: 20px 0px;
+        }
+        .footer div:nth-child(2){
+            width: 50%;
+            float: right;
+        }
+        .footer div:nth-child(2) input,.footer div:nth-child(2) > select{
+            border: none;
+            height: 50px;
+            width: 250px;
+            margin: 2%;
+            border: 2px solid rgb(107, 142, 247);
+            background: none;
+            color: white;
+            border-radius: 5px;
+        }
+        .footer div:nth-child(2) input::placeholder{
+            color: white;
+            padding-left: 4%;
+            font-size: 16px;
+        }
+        .footer div:nth-child(2) button{
+            background:rgb(255, 90, 117);
+             border: none;
+            height: 50px;
+            width: 150px;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+        }
+        .footer div:nth-child(2) > select{
+            width: 360px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card_container">
+            <div>Our Recent News</div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="">
+                <p>Bussiness Planing</p>
+                <p>Amazing places to Visit In Summer</p>
+                <p>Nov 30, 2020</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="">
+                <p>Bussiness Planing</p>
+                <p>Amazing places to Visit In Summer</p>
+                <p>Nov 30, 2020</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="">
+                <p>Bussiness Planing</p>
+                <p>Amazing places to Visit In Summer</p>
+                <p>Nov 30, 2020</p>
+            </div>
+        </div>
+        <div class="clearFloat"></div>
+        <div class="footer">
+            <div>
+                <h1>Request for Call Back</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt consequatur quam labore. Ipsum, mollitia labore.</p>
+            </div>
+            <div>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Phone">
+                <select name="" id="">
+                    <option value="">Service</option>
+                </select>
+                <button>Send</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

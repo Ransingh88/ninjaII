@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's food ticketing system</title>
+    <style>
+        #parent{
+            margin-top: 50px;
+            width: 50%;
+            height:200px;
+            margin: auto;
+            padding:10px;
+            position: relative;
+
+        }
+        P{
+            position:absolute;
+            top: -30px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>McDonald's food ticketing system</h1>
+    
+    <input type="checkbox" name="pizza" id="pizza" value="pizza"><label for="pizza">Pizza</label><br><br>
+    
+    <input type="checkbox" name="burger" id="burger" value="burger"><label for="burger">Burger</label><br><br>
+    
+    <input type="checkbox" name="sandwitch" id="sandwitch" value="sandwitch"><label for="sandwitch">sandwitch</label><br><br>
+    
+    <input type="checkbox" name="chicken_popcorn" id="chicken_popcorn" value="chicken_popcorn"><label for="chicken_popcorn">chicken_popcorn</label><br><br>
+    
+    <input type="checkbox" name="coke" id="coke" value="coke"><label for="coke">coke</label><br><br>
+
+    <button onclick="orderFood()">Order Food</button>
+    <div id="parent"></div>
+</body>
+<script src="foodticket.js"></script>
+</html>

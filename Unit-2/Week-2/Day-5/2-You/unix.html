@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linus > img{
+            width: 150px;
+        }
+        .linus{
+            background-color: thistle;
+            padding: 20px 60px;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        .sal >div >img{
+            width: 120px;
+            float: left;
+            margin-right: 30px;
+        }
+        .clearFloat{
+            clear: both;
+        }
+        .sal > div >  h1{
+            color: red;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+        .sal:nth-child(2){
+            width: 1000px;
+        }
+        .sal{
+            width: 1150px;
+            margin: auto;
+        }
+        .footer{
+            width: 1200px;
+            background-color: orangered;
+            height: 150px;
+            margin-top: 40px;
+            padding: 10px 20px;
+        }
+        .footer div h1{
+            color: white;
+            font-size: 32px
+        }
+        .footer > div:nth-child(3){
+            float: right;
+        }
+        .footer > div:nth-child(1){
+            float: left;
+            clear: both;
+        }
+        .footer > div:nth-child(2){
+            background-color: black;
+            width: 8px;
+            height: 120px;
+            float: left;
+            margin-top: 20px;
+            margin-left: 400px;
+        }
+        .footer-container{
+            margin: auto;
+            width: 1260px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="linus">
+            <img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg" alt="">
+            <h1>Linus Torvalds</h1>
+            <h2>The Creator of Linux and Git</h2>
+        </div>
+        <div class="clearFloat"></div>
+        <div class="sal">
+            <div><img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg" alt=""></div>
+            <div>
+                <h1>Sal Khan</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facilis deserunt ab expedita, esse at nisi nam facere aspernatur illum quo reprehenderit exercitationem, hic dolorem voluptas repudiandae placeat maxime consequatur?</p>
+            </div>
+        </div>
+        <div class="clearFloat"></div>
+        <div class="footer-container">
+        <div class="footer">
+            <div>
+                <h1>Ken Thompson</h1>
+                <p>Designed and inplemented the <br>
+                    original operating system
+                </p>
+            </div>
+            <div></div>
+            <div>
+                <h1>Denish Richie</h1>
+                <p>Designed and inplemented the <br>
+                    original operating system
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
