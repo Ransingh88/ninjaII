@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Station</title>
+    
+    <link rel="stylesheet" href="newsApp.css">
+  </head>
+  <body>
+    <section>
+
+      <div class="navbar">
+        <h1>News Station</h1>
+      
+
+      <div class="search">
+        <select name="country" id="country">
+          <option value="in">India</option>
+          <option value="us">USA</option>
+          <option value="cn">China</option>
+          <option value="nz">New Zealand</option>
+        </select>
+        <button onclick="main()">Search</button>
+      </div>
+
+      </div>
+
+      <div class="main_content">
+        <h1>Top 10 Headlines</h1>
+        <div>
+          <div id="topHead" class="news"></div>
+        </div>
+
+        <div>
+          <div id="paginationBtn"></div>
+        </div>
+      </div>
+
+
+    </section>
+  </body>
+  <script src="newsApp_I.js"></script>
+</html>
