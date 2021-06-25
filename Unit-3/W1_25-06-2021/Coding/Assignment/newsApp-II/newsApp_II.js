@@ -12,8 +12,9 @@ async function main() {
 
 async function getNews() {
   let country = document.getElementById("country").value;
+  let catagory = document.getElementById("catagory").value;
   //console.log('country: ', country);
-  let api = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=bb087c98103a4247a88b7aea6b911876`;
+  let api = `https://newsapi.org/v2/top-headlines?country=${country}&category=${catagory}&apiKey=bb087c98103a4247a88b7aea6b911876`;
   let promise = await fetch(api);
   data = await promise.json();
   // console.log('data: ', data.articles);
