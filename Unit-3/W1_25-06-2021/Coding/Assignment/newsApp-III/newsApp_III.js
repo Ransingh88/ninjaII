@@ -5,8 +5,9 @@ let catagory
 async function main() {
   data = await getNews();
   console.log("data: ", data);
-  //showButtons()
-  showData();
+  showButtons()
+  showData()
+  
 }
 
 main();
@@ -23,45 +24,44 @@ async function getNews() {
   return data.articles;
 }
 
-// function showButtons() {
-//     let PG_btn = document.getElementById('paginationBtn')
-//     PG_btn.innerHTML = null
+function showButtons(index) {
+    let PG_btn = document.getElementById('paginationBtn')
+    PG_btn.innerHTML = null
 
-//     for (let i = 0; i < 10; i++) {
-//         let btn = document.createElement('button')
+    for (let i = 0; i < data.length/5; i++) {
+        let btn = document.createElement('button')
 
-//         btn.setAttribute('id', i+1)
-//         btn.innerText = i+1
-//         btn.onclick = showData;
-//         PG_btn.appendChild(btn)
-//     }
-// }
+      btn.setAttribute('id', i + 1)
+      btn.setAttribute('class', 'paginationBtn')
+      
+        btn.innerText = i+1
+        btn.onclick = showData;
+      
+        PG_btn.appendChild(btn)
+  }
 
-// function showData() {
-//     console.log(this.id)
-//     let id = this.id
-//     topHead.innerHTML = ''
-
-//     let page_data = data.slice(id*5,id*5+5)
-
-//     page_data.forEach(function (el) {
-//         let topHeadline = document.createElement('p')
-//         topHeadline.innerText = el.title;
-
-//         console.log('topHeadline: ', topHeadline);
-
-//         let div = document.createElement('div')
-//         div.appendChild(topHeadline)
-
-//         topHead.append(div)
-//     })
-
-// }
+  if (index == undefined) {
+    index=1
+   }
+       let btn_bg = document.getElementById(index)
+       btn_bg.setAttribute('class','active')
+}
 
 function showData() {
 
   topHead.innerHTML = ''
-  let page_data = data.slice(1, data.length);
+
+  let id = this.id
+  //console.log('id: ', id);
+
+  if (id == undefined ) {
+    id = 1
+   }
+ 
+
+  let page_data = data.slice(id * 5, id * 5 + 5)
+  
+  
   page_data.forEach(function (el) {
     let topHeadline = document.createElement("h1");
     topHeadline.innerText = el.title;
@@ -98,4 +98,5 @@ function showData() {
 
     topHead.append(div);
   });
+  showButtons(id)
 }
