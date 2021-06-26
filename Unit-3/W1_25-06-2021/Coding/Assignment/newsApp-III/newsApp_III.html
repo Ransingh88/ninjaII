@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Station</title>
+    
+    <link rel="stylesheet" href="newsApp-II.css">
+  </head>
+  <body>
+    <section>
+
+      <div class="navbar">
+        <h1>News Station</h1>
+
+        <div class="searchCatagory">
+      <div class="catagory">
+        <!-- <select name="catagory" id="catagory">
+          <option value="">Catagory</option>
+          <option value="general">General</option>
+          <option value="business">Business</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="health">Health</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="technology">Technology</option>
+        </select> -->
+        <!-- <button onclick="main()">Search</button> -->
+        <p>Catagory : </p>
+        <input class="radio_input" type="radio" name="catagory" id="general" value="general" checked>
+        <label class="radio_label" for="general">General</label>
+
+        <input class="radio_input" type="radio" name="catagory" id="business" value="business">
+        <label class="radio_label" for="business">Business</label>
+
+        <input class="radio_input" type="radio" name="catagory" id="entertainment" value="entertainment">
+        <label class="radio_label" for="entertainment">Entertainment</label>
+
+        <input class="radio_input" type="radio" name="catagory" id="health" value="health">
+        <label class="radio_label" for="health">Health</label>
+
+        <input class="radio_input" type="radio" name="catagory" id="science" value="science">
+        <label class="radio_label" for="science">Science</label>
+
+        <input class="radio_input" type="radio" name="catagory" id="sports" value="sports">
+        <label class="radio_label" for="sports">Sports</label>
+
+        <input class="radio_input" type="radio" name="catagory" id="technology" value="technology">
+        <label class="radio_label" for="technology">Technology</label>
+        
+      </div>
+
+      <div class="search">
+        <select name="country" id="country">
+          <option value="in">India</option>
+          <option value="us">USA</option>
+          <option value="cn">China</option>
+          <option value="nz">New Zealand</option>
+        </select>
+        <button onclick="main()">Search</button>
+      </div>
+      </div>
+      </div>
+
+      <div class="main_content">
+        <h1 id="heading"></h1>
+        <div>
+          <div id="topHead" class="news"></div>
+        </div>
+
+        <div>
+          <div id="paginationBtn"></div>
+        </div>
+      </div>
+
+
+    </section>
+  </body>
+  <script src="newsApp_II.js"></script>
+</html>
