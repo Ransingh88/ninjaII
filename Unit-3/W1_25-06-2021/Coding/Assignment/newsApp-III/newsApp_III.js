@@ -26,7 +26,10 @@ async function getNews() {
 
 function showButtons(index) {
     let PG_btn = document.getElementById('paginationBtn')
-    PG_btn.innerHTML = null
+  PG_btn.innerHTML = null
+  if (index == undefined) {
+    index=1
+   }
 
     for (let i = 0; i < data.length/5; i++) {
         let btn = document.createElement('button')
@@ -40,9 +43,7 @@ function showButtons(index) {
         PG_btn.appendChild(btn)
   }
 
-  if (index == undefined) {
-    index=1
-   }
+  
        let btn_bg = document.getElementById(index)
        btn_bg.setAttribute('class','active')
 }
