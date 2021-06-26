@@ -23,40 +23,6 @@ async function getNews() {
   return data.articles;
 }
 
-// function showButtons() {
-//     let PG_btn = document.getElementById('paginationBtn')
-//     PG_btn.innerHTML = null
-
-//     for (let i = 0; i < 10; i++) {
-//         let btn = document.createElement('button')
-
-//         btn.setAttribute('id', i+1)
-//         btn.innerText = i+1
-//         btn.onclick = showData;
-//         PG_btn.appendChild(btn)
-//     }
-// }
-
-// function showData() {
-//     console.log(this.id)
-//     let id = this.id
-//     topHead.innerHTML = ''
-
-//     let page_data = data.slice(id*5,id*5+5)
-
-//     page_data.forEach(function (el) {
-//         let topHeadline = document.createElement('p')
-//         topHeadline.innerText = el.title;
-
-//         console.log('topHeadline: ', topHeadline);
-
-//         let div = document.createElement('div')
-//         div.appendChild(topHeadline)
-
-//         topHead.append(div)
-//     })
-
-// }
 
 function showData() {
 
