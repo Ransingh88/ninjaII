@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    padding: 12px 12px;
+    background-color: rgb(3, 2, 2);
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    width: 150px;
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+.main{
+  background-color: orange;
+  width: 80%;
+  margin: auto;
+  height: 600px;
+  margin-top: 50px;
+  padding: 50px;
+}
+.date{
+  font-size: 32px;
+  padding: 15px 0;
+  font-weight: 500;
+  margin: 10px 0 20px 0;
+}
+.txt{
+  font-size: 32px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+.logo{
+  position: absolute;
+  right: 13%;
+  top: 100px;
+  width: 150px;
+}
+.arrow{
+  width: 30px;
+  position: absolute;
+  bottom: 80px;
+  right: 15%;
+  
+}
