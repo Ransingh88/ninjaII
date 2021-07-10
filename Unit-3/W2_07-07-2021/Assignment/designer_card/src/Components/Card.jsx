@@ -2,9 +2,9 @@ import styles from './Card.module.css'
 import {Pro} from './Pro'
 import {MsgBtn} from './MsgBtn'
 import {MsgBtn2} from './MsgBtn2'
-let arr = ['UI/UX','HTML','CSS','FULL STACK WEB DEVELOPMENT','JAVASCRIPT','PYTHON','JAVA','POSTMAN','REACT']
+export function Card(props) {
 
-export function Card() {
+    console.log(props)
     return <div className={styles.main}>
         <div className={styles.card}>
             <Pro />
@@ -12,9 +12,9 @@ export function Card() {
                 
                 <img src="https://secure.gravatar.com/avatar/2055d75f5788c815df2fa361093e9ac8?s=400&d=mm&r=g" alt="" />
                 <div className={styles.info}>
-                <h2>Ricky Park</h2>
-                <h5>NEWYORK</h5>
-                <p>User Interface and front-end Developer</p>
+                    <h2>{ props.info.name}</h2>
+                <h5>{ props.info.location}</h5>
+                <p>{ props.info.desc}</p>
                 </div>
                 <div className={styles.bottons}>
                     <MsgBtn />
@@ -26,7 +26,7 @@ export function Card() {
                 <p>SKILLS</p>
                 <div className={styles.skills}>
                     <ul>
-                        {arr.map((ele) => (
+                        { props.info.skills.map((ele) => (
                             <li>{ele}</li>
                         ))}
                     </ul>
