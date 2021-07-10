@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+.pro {
+  background-color: rgb(255, 217, 0);
+  color: rgb(48, 0, 48);
+  padding: 2px 6px;
+  text-align: center;
+  width: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 3px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.MsgBtn {
+  background-color: steelblue;
+  padding: 8px 16px;
+  width: 120px;
+  border-radius: 2px;
+  color: rgb(10, 9, 29);
+  margin: 2px;
+  text-align: center;
+
+}
+
+.MsgBtn2 {
+  background-color: transparent;
+  padding: 8px 16px;
+  width: 120px;
+  border-radius: 2px;
+  color: steelblue;
+  border: 1px solid steelblue;
+  margin: 2px;
+  text-align: center;
+
+}
