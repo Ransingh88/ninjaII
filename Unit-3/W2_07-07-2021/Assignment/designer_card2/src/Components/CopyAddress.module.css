@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.copyAddress {
+  color: rgb(92, 92, 92);
+  padding: 4px 8px;
+  background-color: #eee;
+  /* width: 140px; */
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 400;
+  margin: 6px;
+}
