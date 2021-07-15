@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.copyAddress {
+  color: rgb(92, 92, 92);
+  padding: 4px 8px;
+  background-color: #eee;
+  /* width: 140px; */
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 400;
+  margin: 6px;
+  cursor: pointer;
+}
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  align-items: center;
+}
+
+.logoside {
+  display: flex;
+  align-items: center;
+}
+.logoside > img {
+  width: 30px;
+  margin: 5px;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul li {
+  list-style-type: none;
+  padding: 4px 10px;
+  font-weight: 500;
+  color: #505050;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu ul li.signout {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.cardMain {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 12px;
+  border-radius: 6px;
+  align-items: center;
+  /* border: 1px solid #eee; */
+  margin-bottom: 2px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.content > img {
+  width: 40px;
+  border-radius: 50%;
+  margin: 4px 10px;
+}
+.content div > p {
+  color: #979797;
+  font-weight: 500;
+}
+
+.profileMain {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  border-radius: 8px;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.profileMain > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30%;
+  left: 40%;
+  border: 4px solid whitesmoke;
+  
+}
+.profileMain .logos {
+  display: flex;
+  width: 150px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  cursor: pointer;
+}
+.name{
+  position: absolute;
+  text-align: center;
+  left: 30%;
+  top: 40%;
+  color: gray;
+}
+.name h1{
+  color: #505050;
+}

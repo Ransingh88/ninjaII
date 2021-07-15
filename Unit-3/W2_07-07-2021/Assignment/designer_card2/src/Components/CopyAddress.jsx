@@ -1,4 +1,4 @@
-import styles from './CopyAddress.module.css'
+import styles from './Styles.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export function CopyAddress(props) {
