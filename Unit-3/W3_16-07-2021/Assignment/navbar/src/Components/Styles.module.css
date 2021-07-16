@@ -1,0 +1,28 @@
+.main{
+    width: 80%;
+    margin: auto;
+    height: 80px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgb(182, 182, 182);
+}
+.main div:nth-child(2){
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+.menu{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 12px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.menu:hover{
+    opacity: 0.8;
+}
