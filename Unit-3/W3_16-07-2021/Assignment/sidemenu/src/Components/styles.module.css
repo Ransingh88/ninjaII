@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(250, 157, 124);
+}
+
+.main {
+  height: 400px;
+  /* background-color: whitesmoke; */
+  width: 250px;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+.main > div {
+  border-bottom: 2px solid #ddd;
+  /* border-top:2px solid #eee ; */
+}
