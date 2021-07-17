@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+import card from './pinkcredircard.jpg';
 import './App.css';
 import {Form} from './Components/Form'
 
 function App() {
   return (
-    <div>
+    <div className='creditCard'>
+      <img src={card} alt="card" />
      <Form/>
     </div>
   );
